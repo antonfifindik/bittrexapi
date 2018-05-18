@@ -19,7 +19,7 @@ public class BittrexApiClient {
     private RestTemplate restTemplate = new RestTemplate(requestFactory);
 
     public BittrexApiResponse getAll() {
-        String url = "https://bittrex.com/api/v1.1/public/getmarkethistory?market=BTC-DOGE";
+        String url = "https://bittrex.com/api/v1.1/public/getmarkethistory?market=BTC-XRP";
         BittrexApiResponse result;
         try {
             result = restTemplate.getForObject(new URI(url), BittrexApiResponse.class);

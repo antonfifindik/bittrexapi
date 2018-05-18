@@ -3,8 +3,44 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
 </head>
 <body>
-    <h1>Hello!</h1>
+
+    <div class="container" style="margin-top: 30px">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">История продаж BTC-XRP</div>
+                    <div class="panel-body">
+                        <table id="myTable" class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Time stamp</th>
+                                <th>Quanity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th>Fill type</th>
+                                <th>Order type</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="marketHistory : ${responseList.result}">
+                                <td th:utext="${marketHistory.timeStamp}"></td>
+                                <td th:utext="${marketHistory.quantity}"></td>
+                                <td th:utext="${marketHistory.price}"></td>
+                                <td th:utext="${marketHistory.total}"></td>
+                                <td th:utext="${marketHistory.fillType}"></td>
+                                <td th:utext="${marketHistory.orderType}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
