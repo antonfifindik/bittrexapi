@@ -31,7 +31,8 @@ public class BittrexApiClient {
 
     public static void main(String[] args) { // for test
         BittrexApiResponse response = new BittrexApiClient().getAll();
-        System.out.println(response);
+        for(MarketHistory marketHistory : response.getResult())
+            System.out.println(marketHistory);
     }
 
 }
