@@ -8,11 +8,4 @@ public class BittrexApiResponse {
     private String message;
     private MarketHistory[] result;
 
-    public BittrexApiResponse() {}
-
-    public BittrexApiResponse(boolean success, String message, MarketHistory[] result) {
-        this.success = success;
-        this.message = message;
-        this.result = result;
-    }
 }

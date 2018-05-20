@@ -15,6 +15,6 @@ public class MainController {
     @RequestMapping("/")
     public String getIndexPage(Model model) {
         model.addAttribute("responseList", bittrexApiClient.getAll());
-        return "hello";
+        return "index";
     }
 }
